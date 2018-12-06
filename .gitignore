@@ -1,0 +1,28 @@
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+# Bundler
+Gemfile.lock
+gems.locked
+bin/*
+.bundle/*
+
+# test kitchen
+.kitchen/
+.kitchen.local.yml
+
+# Chef
+Berksfile.lock
+.zero-knife.rb
+Policyfile.lock.json
+
+#Mongo SSL
+ca_mongodb.sh
+MongoDB-demo-CA/
+files/keys/
+files/mongodb-linux-x86_64-enterprise-rhel70-3.6.2.tgz

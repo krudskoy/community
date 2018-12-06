@@ -1,0 +1,23 @@
+/apps/mongoapp/logs/mongodb.log {
+    size 50M
+    create 700 was was
+    postrotate
+    day=$(date +%Y%m%d)
+    daytime=$(date +%Y%m%d-%H:%M:%S)
+    mv mongodb.log-$day /apps/mongoapp/logs/mongodb.log-$daytime
+    endscript
+
+}
+
+/apps/mongoapp/data/db/auditlog.json {
+    size 50M
+    create 700 was was
+    rotate 30
+    dateext
+    postrotate
+    day=$(date +%Y%m%d)
+    daytime=$(date +%Y%m%d-%H:%M:%S)
+    mv auditlog.json-$day /apps/mongoapp/data/db/auditlog.json-$daytime
+    endscript
+
+}
